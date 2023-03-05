@@ -1,6 +1,13 @@
 import logo from "./logo.svg";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
 import "./App.css";
 
 export default function App() {
-  return <h1>App component</h1>;
+  return (
+    <div>
+      <Header />
+      <Hero />
+    </div>
+  );
 }
