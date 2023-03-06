@@ -145,6 +145,7 @@ body {
   flex-direction: column;
 }
 
+/* ------------------------------------ nav---------------------------------- */
 .nav {
   font-weight: 600;
   font-size: 30px;
@@ -162,18 +163,23 @@ body {
   max-width: 100px;
 }
 
-.hero--image {
-  width: 100%;
+/* ------------------------------------ hero -------------------------------- */
+
+.hero,
+.card--container {
+  align-self: center;
+  /* control size of sections */
+  width: 60%;
+  padding: 20px;
 }
 
 .hero {
-  /* control height of imgae */
-  width: 60%;
-  padding: 20px;
-
   display: flex;
   flex-direction: column;
-  align-self: center;
+}
+
+.hero--image {
+  width: 100%;
 }
 
 .hero--header {
@@ -181,4 +187,40 @@ body {
 
   font-weight: 600;
   font-size: 30px;
+}
+
+/* -------------------------------------- card ------------------------------ */
+
+.card--container {
+  display: flex;
+  justify-content: center;
+}
+
+.card--1 {
+  align-self: center;
+
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card1--img {
+  width: 100%;
+}
+
+.card1--rating {
+  display: flex;
+  align-items: center;
+}
+
+.card1--star {
+  width: 25px;
+}
+
+.card1--grey {
+  color: grey;
+}
+
+.card1--bold {
+  font-weight: bold;
 }
