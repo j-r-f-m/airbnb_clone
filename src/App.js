@@ -8,14 +8,16 @@ export default function App() {
   const mappedData = data.map((dataEle) => {
     return (
       <Card
-        key={dataEle.title}
-        img={dataEle.coverImg}
-        rating={dataEle.stats.rating}
-        reviewCount={dataEle.stats.reviewCount}
-        location={dataEle.location}
-        title={dataEle.title}
-        price={dataEle.price}
-        openSpots={dataEle.openSpots}
+        // key={dataEle.title}
+        // img={dataEle.coverImg}
+        // rating={dataEle.stats.rating}
+        // reviewCount={dataEle.stats.reviewCount}
+        // location={dataEle.location}
+        // title={dataEle.title}
+        // price={dataEle.price}
+        // openSpots={dataEle.openSpots}
+        key={dataEle.id}
+        data={dataEle}
       />
     );
   });
