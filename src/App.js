@@ -1,22 +1,30 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Card from "./components/Card";
-
+import data from "./data";
 import "./App.css";
 
 export default function App() {
+  const mappedData = data.map((dataEle) => {
+    return (
+      <Card
+        key={dataEle.title}
+        img={dataEle.coverImg}
+        rating={dataEle.stats.rating}
+        reviewCount={dataEle.stats.reviewCount}
+        location={dataEle.location}
+        title={dataEle.title}
+        price={dataEle.price}
+        openSpots={dataEle.openSpots}
+      />
+    );
+  });
+
   return (
     <div className="app-container">
       <Header />
       <Hero />
-      <Card
-        img="swimmer.jpg"
-        rating={5}
-        reviewCount={7}
-        country={"DE"}
-        title={"Life Lessons with Katie Zaferes"}
-        price={136}
-      />
+      <section className="card--container">{mappedData}</section>
     </div>
   );
 }
